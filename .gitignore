@@ -2,20 +2,20 @@
 # Dependencies
 vendor/
 
-# Logs
+# Logs and temp files
 *.log
+*.tmp
 
 # Environment
 .env
 .env.local
-.env.*
+*.env.*
 
 # Editor/IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*.tmp
 
 # OS
 .DS_Store
@@ -44,200 +44,81 @@ __pycache__/
 .Python
 *.so
 .coverage
-.coverage.*
-.cache
-nosetests.xml
-.pytest_cache/
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.hypothesis/
 .mypy_cache/
-.tox/
+.pytest_cache/
 .eggs/
 *.egg-info/
 .installed.cfg
-.pip-delete-this-directory.txt
+*.manifest
+*.spec
 
 # Node.js
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnp
-.pnp.js
-.npm
-.npx
-node/
-package-lock.json
+lerna-debug.log*
 .yarn-integrity
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.editable-virtualenvs
-
-# PHP
-*.phar
-.php_cs
-.php_cs.dist
-.php_cs.cache
-.scrutinizer.yml
-.styleci.yml
-.travis.yml
-phpunit.xml
-phpunit.xml.dist
-phpspec.yml
-.roave-backward-compatibility-check.yaml
+.yarn-cache
+.npm
+.npmrc
+package-lock.json
+yarn.lock
+.pnp.*
+.pnp.js
 
 # Java
 *.class
 *.jar
 *.war
 *.ear
-*.nar
-*.jnilib
-*.so
-target/
-.gradle/
-!src/main/resources/static/dist/
-!src/main/resources/public/dist/
+hs_err_pid*
+replay_pid*
 
 # C/C++
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.lib
-*.dylib
-*.plist
-*.idb
-*.pdb
-*.gch
-*.gcda
-*.gcno
-*.gcov
-*.stackdump
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-*.vcxproj.filters
+*.i
+*.ii
+*.s
+*.su
+*.lo
 
 # Ruby
 *.gem
 *.rbc
+.bundle
+.jruby_cache/
+.rbenv-gemsets
+.rbenv-vars
+.rubocop.yml
+.ruby-gemset
+.ruby-version
 .bundle/
-.config/byebug_history
-.rbx/
-*.backup
-*.bak
-*.orig
-*.rej
-*.diff
-*.err
-.log
-~*
+vendor/bundle
 
 # Go
+*.out
 *.exe
-*.exe~
 *.dll
 *.so
-*.so.*
 *.dylib
 *.test
 *.prof
-*.out
 go.mod
 go.sum
 
 # Rust
-*.o
-*.a
-*.so
-*.dylib
-*.dSYM/
-*.dll
 target/
 Cargo.lock
 
-# .NET
-*.dll
-*.exe
-*.pdb
-*.mdb
-*.exe
-*.cache
-*.ilk
-*.meta
-*.obj
-*.iobj
-*.ipdb
-*.o
-*.obj
-*.lib
-*.a
-*.exp
-*.app
-*.manifest
-*.res
-*.rsp
-*.rsp.bak
-*.vspscc
-*.vssscc
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-*.cs
-*.vb
-*.vcxproj
-*.vcxproj.filters
-*.vcproj
-*.vcproj.filters
-*.vcproj.user
-*.vcxproj.user
-*.vcxproj.userosscache
-*.vcxproj.users
-*.vcxproj.usertasks
-*.vcxproj.userprefs
-*.vcxproj.userosscache
-*.vcxproj.users
-*.vcxproj.usertasks
-*.vcxproj.userprefs
-*.userosscache
-*.sln.docstates
-*.user
-*.userosscache
-*.suo
-*.sln.docstates
-*.userosscache
-*.user
-*.userosscache
-*.suo
-*.sln.docstates
-bin/
-obj/
-out/
-.vs/
-.vscode/
-*.VC.db
-*.VC.VC.opendb
-*.VC.VC.opendb-shm
-*.VC.VC.opendb-wal
-*.VC.VC.opendb-shm
-*.VC.VC.opendb-wal
-*.VC.VC.opendb
-*.VC.VC.opendb-shm
-*.VC.VC.opendb-wal
-*.VC.VC.opendb
-*.VC.VC.opendb-shm
-*.VC.VC.opendb-wal
-Debug/
-Release/
-x64/
-x86/
-build/
-artifacts/
+# PHP
+*.phar
+vendor/composer/installed.json
+composer.lock
 
 # Compression
 *.zip
@@ -263,38 +144,11 @@ artifacts/
 *.tar.xz
 *.tar.zst
 
-# Generated documentation
-docs/_build/
-docs/build/
-
-# IDE specific
-.vs/
-.vscode/
-.idea/
-*.swp
-*.swo
+# Backup files
 *~
-
-# Temp files
-*.tmp
-*.temp
 *.bak
-*.backup
 *.swp
 *.swo
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-Icon?
-VolumeIcon.icns
-*.nib
-*~.nib
-*.plist$
+*#
+.\#*
 ```
