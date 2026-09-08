@@ -31,7 +31,7 @@ class DesaCataloghi extends Module
 {
     public function __construct()
     {
-        $this->name = 'desacataloghi';
+        $this->name = 'desa_cataloghi';
         $this->tab = 'front_office_features';
         $this->version = '1.0.0';
         $this->author = 'Team Desantis';

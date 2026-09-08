@@ -98,7 +98,6 @@ class AdminDesaCataloghiController extends ModuleAdminController
         $this->addJS(_MODULE_DIR_ . $this->module->name . '/views/js/desacataloghi-admin.js');
         $this->addCSS(_MODULE_DIR_ . $this->module->name . '/views/css/desacataloghi.css');
         
-        $this->initTabModuleList();
         $this->initToolbar();
         $this->initPageHeaderToolbar();
 
@@ -337,23 +336,23 @@ class AdminDesaCataloghiController extends ModuleAdminController
             return '-';
         }
 
-        $module = Module::getInstanceByName('desacataloghi');
-        $pdfUrl = _MODULE_DIR_ . 'desacataloghi/views/pdf/' . $pdfFile;
+        $module = Module::getInstanceByName('desa_cataloghi');
+        $pdfUrl = _MODULE_DIR_ . 'desa_cataloghi/views/pdf/' . $pdfFile;
         
         return '<a href="' . Tools::safeOutput($pdfUrl) . '" target="_blank" class="btn btn-default">
             <i class="icon-file-pdf"></i> ' . basename($pdfFile) . '
         </a>';
     }
 
-    public function ajaxProcessUpdatePositions()
+    public function ajaxProcessupdatePositions()
     {
         $positions = Tools::getValue('positions');
         
         if (is_array($positions)) {
             DesaCatalogo::updatePositions($positions);
-            die(json_encode(['success' => true]));
+            $this->ajaxDie(json_encode(['success' => true]));
         }
         
-        die(json_encode(['success' => false]));
+        $this->ajaxDie(json_encode(['success' => false]));
     }
 }
