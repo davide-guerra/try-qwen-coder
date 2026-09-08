@@ -306,7 +306,7 @@ class AdminDesaCataloghiController extends ModuleAdminController
         parent::processSave();
     }
 
-    protected function processDelete()
+    public function processDelete()
     {
         $obj = $this->loadObject(true);
 
