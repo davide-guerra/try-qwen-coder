@@ -1,0 +1,109 @@
+/**
+ * 2007-2024 Team Desantis
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@prestashop.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+ * versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ *  @author    Team Desantis <info@teamdesantis.com>
+ *  @copyright 2007-2024 Team Desantis
+ *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+.desa-cataloghi-list {
+    padding: 20px 0;
+}
+
+.desa-catalog-card {
+    margin-bottom: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.desa-catalog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.desa-catalog-preview {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    background-color: #f8f9fa;
+}
+
+.desa-catalog-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desa-catalog-card .card-body {
+    padding: 20px;
+}
+
+.desa-catalog-card .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.desa-catalog-card .card-text {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.desa-catalog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #25b9d7;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.desa-catalog-btn:hover {
+    background-color: #1a9cb7;
+    color: #fff;
+}
+
+.desa-catalog-btn i {
+    font-size: 18px;
+}
+
+/* Print styles */
+@media print {
+    .desa-cataloghi-list {
+        padding: 0;
+    }
+    
+    .desa-catalog-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .desa-catalog-btn {
+        display: none;
+    }
+}
